@@ -6,9 +6,11 @@ public class HelloApp {
             System.out.println("Hello, World!");
         } else {
             StringBuilder greeting = new StringBuilder("Hello, ");
-            for (int i = 0; i < args.length; i++) {
-                greeting.append(args[i]);
-                if (i != args.length - 1) {
+            int count = 0;
+            for (String name : args) {
+                greeting.append(name);
+                count++;
+                if (count < args.length) {
                     greeting.append(", ");
                 }
             }
